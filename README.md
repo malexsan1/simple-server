@@ -1,0 +1,1 @@
+A simple server used to teach authentication and authorization.
