@@ -1,4 +1,14 @@
-A simple server used to teach authentication and authorization.
+## A simple server used for a TodoApp assignment.
+
+## Instalation
+`npm install`
+or
+`yarn install`
+
+## Running the server
+`npm run start`
+or
+`yarn start`
 
 ## Authentication
 
