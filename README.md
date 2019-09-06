@@ -87,26 +87,29 @@ response: {
 ```js
 response: [
   {
-    id: "52b149bc-b6f9-5eba-a34b-6c17be4167e2",
-    price: "$5681.30",
+    id: "dd6e46ad-4254-5242-abf0-29b9496d445b",
+    price: "$202.59",
+    name: "Vacheron Constantin",
     description:
-      "Gezasi vitopu siknamus giosme zolitvif mur ric dowep iv of wus envuvwo wimrovfog sihimimom je olzozo mijjelve. Kaf wo sandiure hufupisuh posuge ikvuvu bel basok jilboate fulwok vi zoripun licfotkal relcosof tuod lukisefuv vaomi ipe. Fezub jezbat raefoem ib wa haldobaj fobilgam ivonibig wus fugurem asmijra dukreta basvev.",
+      "Si pes guguro zebitu ebiza pebdojaj decgewur ol pud mo wadnum li vetwupav etip. Alolihhon arusuz li lapku pupop tanaka giuf adowi vejsam ve kek su gek. Ovhi uzogapi nilwukjoz tis nunwaoki pofisoku jevwohti arnefjom gana govwe mopcug gowvimze bejubot ih demog.",
+    image:
+      "https://placeholder.pics/svg/300/289E5D-3648FE/000/Vacheron%20Constantin",
     info: {
-      listingNumber: "6f08c2e8",
-      referenceNumber: "db0b8d72",
-      model: "Imetoka",
-      brand: "Hublot",
-      year: "2096",
-      gender: "Female"
+      listingNumber: "163e90b4",
+      referenceNumber: "73e38084",
+      model: "Kufpaig",
+      brand: "Vacheron Constantin",
+      year: "1608",
+      gender: "Male"
     },
     calibre: {
       powerReserve: 19,
-      movement: "Manual",
-      movementPerCalibre: 1622
+      movement: "Automatic",
+      movementPerCalibre: 1824
     },
     case: {
       material: "steel",
-      diameter: 39,
+      diameter: 33,
       glass: "salmon"
     },
     strap: {
@@ -122,31 +125,32 @@ response: [
 
 ```js
 response: {
-    id: "52b149bc-b6f9-5eba-a34b-6c17be4167e2",
-    price: "$5681.30",
-    description:
-      "Gezasi vitopu siknamus giosme zolitvif mur ric dowep iv of wus envuvwo wimrovfog sihimimom je olzozo mijjelve. Kaf wo sandiure hufupisuh posuge ikvuvu bel basok jilboate fulwok vi zoripun licfotkal relcosof tuod lukisefuv vaomi ipe. Fezub jezbat raefoem ib wa haldobaj fobilgam ivonibig wus fugurem asmijra dukreta basvev.",
-    info: {
-      listingNumber: "6f08c2e8",
-      referenceNumber: "db0b8d72",
-      model: "Imetoka",
-      brand: "Hublot",
-      year: "2096",
-      gender: "Female"
+    "id": "dd6e46ad-4254-5242-abf0-29b9496d445b",
+    "price": "$202.59",
+    "name": "Vacheron Constantin",
+    "description": "Si pes guguro zebitu ebiza pebdojaj decgewur ol pud mo wadnum li vetwupav etip. Alolihhon arusuz li lapku pupop tanaka giuf adowi vejsam ve kek su gek. Ovhi uzogapi nilwukjoz tis nunwaoki pofisoku jevwohti arnefjom gana govwe mopcug gowvimze bejubot ih demog.",
+    "image": "https://placeholder.pics/svg/300/289E5D-3648FE/000/Vacheron%20Constantin",
+    "info": {
+      "listingNumber": "163e90b4",
+      "referenceNumber": "73e38084",
+      "model": "Kufpaig",
+      "brand": "Vacheron Constantin",
+      "year": "1608",
+      "gender": "Male"
     },
-    calibre: {
-      powerReserve: 19,
-      movement: "Manual",
-      movementPerCalibre: 1622
+    "calibre": {
+      "powerReserve": 19,
+      "movement": "Automatic",
+      "movementPerCalibre": 1824
     },
-    case: {
-      material: "steel",
-      diameter: 39,
-      glass: "salmon"
+    "case": {
+      "material": "steel",
+      "diameter": 33,
+      "glass": "salmon"
     },
-    strap: {
-      material: "leather",
-      braceletColor: "black"
+    "strap": {
+      "material": "leather",
+      "braceletColor": "black"
     }
   }
 ```
