@@ -27,18 +27,18 @@ todoRoutes.post("/", (req, res) => {
 })
 
 todoRoutes.patch("/:todoId", (req, res) => {
-  const todoId = Number(req.params.todoId)
+  const todoId = req.params.todoId
   const { description, done = false } = req.body
 
-  todos = todos.map(t => (t.id === todoId ? { ...t, description, done } : t))
+  todos = todos.map(t => (t.id == todoId ? { ...t, description, done } : t))
 
-  res.send(todos.find(t => t.id === todoId))
+  res.send(todos.find(t => t.id == todoId))
 })
 
 todoRoutes.delete("/:todoId", (req, res) => {
-  const todoId = Number(req.params.todoId)
+  const todoId = req.params.todoId
 
-  todos = todos.filter(t => t.id !== todoId)
+  todos = todos.filter(t => t.id != todoId)
 
   res.json({ todoId })
 })
