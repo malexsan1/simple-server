@@ -6,7 +6,6 @@ const JWT_SECRET = "TOP_SECRET"
 
 const users = []
 authRoutes.post("/login", (req, res) => {
-  console.log(req)
   const newUser = {
     email: req.body.email,
     password: req.body.password
