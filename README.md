@@ -39,6 +39,16 @@ response: [
 ]
 ```
 
+### **GET @ /api/todos/:todoId** -> list of todos
+
+```js
+response: {
+  id: String
+  description: String
+  done: Boolean
+}
+```
+
 ### **POST @ /api/todos** -> creates a new todo
 
 ```js

@@ -1,14 +1,11 @@
-const Chance = require("chance")
-const express = require("express")
+const Chance = require("chance");
+const express = require("express");
 
-const watchesRoutes = express.Router()
-const chance = new Chance()
+const watchesRoutes = express.Router();
+const chance = new Chance();
 
 const generateColor = () =>
-  chance
-    .color({ format: "hex" })
-    .replace("#", "")
-    .toUpperCase()
+  chance.color({ format: "hex" }).replace("#", "").toUpperCase();
 
 const watches = Array.from({ length: 25 }, (_, i) => {
   const name = chance.pickone([
@@ -16,11 +13,11 @@ const watches = Array.from({ length: 25 }, (_, i) => {
     "Vacheron Constantin",
     "Patek Philippe",
     "Hublot",
-    "Louis Moinet"
-  ])
+    "Louis Moinet",
+  ]);
 
-  const startColor = generateColor()
-  const endColor = generateColor()
+  const startColor = generateColor();
+  const endColor = generateColor();
 
   return {
     id: chance.guid(),
@@ -36,12 +33,12 @@ const watches = Array.from({ length: 25 }, (_, i) => {
       model: chance.word({ capitalize: true }),
       brand: name,
       year: chance.year({ min: 1600, max: 2019 }),
-      gender: chance.gender()
+      gender: chance.gender(),
     },
     calibre: {
       powerReserve: chance.natural({ min: 10, max: 50 }),
       movement: chance.pickone(["Automatic", "Manual"]),
-      movementPerCalibre: chance.natural({ min: 1000, max: 5000 })
+      movementPerCalibre: chance.natural({ min: 1000, max: 5000 }),
     },
     case: {
       material: chance.pickone(["leather", "gold", "steel"]),
@@ -52,8 +49,8 @@ const watches = Array.from({ length: 25 }, (_, i) => {
         "green",
         "salmon",
         "brown",
-        "black"
-      ])
+        "black",
+      ]),
     },
     strap: {
       material: chance.pickone(["leather", "gold", "steel"]),
@@ -63,20 +60,20 @@ const watches = Array.from({ length: 25 }, (_, i) => {
         "green",
         "salmon",
         "brown",
-        "black"
-      ])
-    }
-  }
-})
+        "black",
+      ]),
+    },
+  };
+});
 
 watchesRoutes.get("/", (req, res) => {
-  res.json(watches)
-})
+  res.json(watches);
+});
 
-watchesRoutes.get("/:todoId", (req, res) => {
-  const watchId = req.params.todoId
+watchesRoutes.get("/:watchId", (req, res) => {
+  const watchId = req.params.watchId;
 
-  res.json(watches.find(w => w.id == watchId))
-})
+  res.json(watches.find((w) => w.id == watchId));
+});
 
-module.exports = watchesRoutes
+module.exports = watchesRoutes;

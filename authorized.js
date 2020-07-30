@@ -7,6 +7,7 @@ const authorizedMiddleware = (req, res, next) => {
   jwt.verify(token, JWT_SECRET, (err, user) => {
     if (err) {
       res.sendStatus(403)
+      return;
     }
     req.user = user
     next()
