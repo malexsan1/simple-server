@@ -73,7 +73,11 @@ watchesRoutes.get("/", (req, res) => {
 watchesRoutes.get("/:watchId", (req, res) => {
   const watchId = req.params.watchId;
 
-  res.json(watches.find((w) => w.id == watchId));
+  res.json(watches.find(w => w.id == watchId));
+});
+
+watchesRoutes.post("/", (req, res) => {
+  // added post
 });
 
 module.exports = watchesRoutes;
