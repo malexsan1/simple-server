@@ -16,7 +16,7 @@ todoRoutes.get("/", (req, res) => {
 
 todoRoutes.get("/:todoId", (req, res) => {
   const todoId = req.params.todoId;
-  const todo = todos.find((t) => t.id === todoId);
+  const todo = todos.find(t => t.id === todoId);
 
   if (todo) {
     return res.send(todo);
@@ -40,15 +40,25 @@ todoRoutes.patch("/:todoId", (req, res) => {
   const todoId = req.params.todoId;
   const { description, done = false } = req.body;
 
-  todos = todos.map((t) => (t.id == todoId ? { ...t, description, done } : t));
+  todos = todos.map(t => {
+    if (t.id === todoId) {
+      const d = description || t.description;
+      return {
+        ...t,
+        done,
+        description: d,
+      };
+    }
+    return t;
+  });
 
-  res.send(todos.find((t) => t.id == todoId));
+  res.send(todos.find(t => t.id == todoId));
 });
 
 todoRoutes.delete("/:todoId", (req, res) => {
   const todoId = req.params.todoId;
 
-  todos = todos.filter((t) => t.id != todoId);
+  todos = todos.filter(t => t.id != todoId);
 
   res.json({ todoId });
 });
